@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Menu, ArrowLeft, LayoutGrid, List, Settings, Moon, Sun, CheckSquare } from 'lucide-react';
+import { Menu, ArrowLeft, LayoutGrid, List, Settings, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import tasknestLogo from '@/assets/tasknest-logo.png';
 
 interface NavbarProps {
   boardName?: string;
@@ -49,9 +50,7 @@ export function Navbar({
       <div className="flex items-center gap-3 flex-1">
         {!showBoardControls && (
           <>
-            <div className="w-8 h-8 tasknest-gradient rounded-lg flex items-center justify-center">
-              <CheckSquare className="w-4 h-4 text-white" />
-            </div>
+            <img src={tasknestLogo} alt="TaskNest Logo" className="w-10 h-10 object-contain" />
             <div>
               <h1 className="font-semibold text-sm">TaskNest</h1>
               <p className="text-xs text-muted-foreground">by BhimSaaStudios</p>
