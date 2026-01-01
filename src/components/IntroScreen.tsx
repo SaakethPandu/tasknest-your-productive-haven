@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckSquare } from 'lucide-react';
+import tasknestLogo from '@/assets/tasknest-logo.png';
 
 interface IntroScreenProps {
   onComplete: () => void;
@@ -113,10 +113,8 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
               className="mb-8"
             >
               <div className="relative">
-                <div className="absolute inset-0 tasknest-gradient rounded-2xl blur-xl opacity-50" />
-                <div className="relative w-24 h-24 tasknest-gradient rounded-2xl flex items-center justify-center tasknest-glow">
-                  <CheckSquare className="w-12 h-12 text-white" />
-                </div>
+                <div className="absolute inset-0 rounded-full blur-xl opacity-30 bg-primary/40" />
+                <img src={tasknestLogo} alt="TaskNest Logo" className="relative w-32 h-32 object-contain drop-shadow-lg" />
               </div>
             </motion.div>
 

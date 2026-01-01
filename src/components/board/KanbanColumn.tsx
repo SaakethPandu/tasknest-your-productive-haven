@@ -84,10 +84,11 @@ export function KanbanColumn({
       className={columnBg}
     >
       {/* Column Header */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 -mx-4 -mt-4 px-4 py-3 rounded-t-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-b border-primary/10">
         <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-sm">{column.name}</h3>
-          <span className="bg-secondary text-secondary-foreground text-xs font-medium px-2 py-0.5 rounded-full">
+          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <h3 className="font-semibold text-sm text-foreground">{column.name}</h3>
+          <span className="bg-primary/20 text-primary text-xs font-bold px-2.5 py-1 rounded-full">
             {tasks.length}
           </span>
         </div>
@@ -95,7 +96,7 @@ export function KanbanColumn({
           <Button
             variant="ghost"
             size="icon"
-            className="w-6 h-6 text-muted-foreground hover:text-destructive"
+            className="w-6 h-6 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
             onClick={onDeleteColumn}
           >
             <Trash2 className="w-4 h-4" />
